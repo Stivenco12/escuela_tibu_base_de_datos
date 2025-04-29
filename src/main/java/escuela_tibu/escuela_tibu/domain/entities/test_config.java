@@ -1,13 +1,11 @@
 package escuela_tibu.escuela_tibu.domain.entities;
 
 import java.time.LocalDate;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.Getter;
@@ -39,8 +37,8 @@ public class test_config {
     @Column(name = "description", length = 90, nullable = true)
     String description;
 
-    @Lob
-    @Column(name = "test_summary", nullable = true)
+
+    @Column(name = "test_summary", columnDefinition="TEXT")
     private String testSummary;
 
 
