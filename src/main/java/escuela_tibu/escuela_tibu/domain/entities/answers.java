@@ -44,6 +44,6 @@ public class answers {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    @Column(name = "description", length = 50, nullable = true)
+    @Column(name = "description", length = 80, nullable = true)
     String description;
 }
