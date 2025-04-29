@@ -9,7 +9,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
-import jakarta.websocket.Decoder.Text;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
