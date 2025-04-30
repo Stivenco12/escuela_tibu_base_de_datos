@@ -1,5 +1,8 @@
 package escuela_tibu.escuela_tibu.domain.entities;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Column;
@@ -9,6 +12,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.Getter;
@@ -35,4 +39,10 @@ public class questions {
     @JoinColumn(name = "id_typeoption")
     @JsonBackReference
     type_options idTypeOption;
+
+    @Column(name = "description", length = 80, nullable = true)
+    String description;
+
+    @OneToMany(mappedBy = "question")
+    private Set<test_questions> testQuestions = new HashSet<>();
 }
